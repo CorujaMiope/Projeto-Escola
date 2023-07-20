@@ -10,16 +10,24 @@ namespace Escola
 {
     internal class Professor
     {
-        private static string nome { get; set; }
-        private static string materia { get; set; }
+        //Variaveis
+        
+        
 
-        public List<string> ListaProfessores = new List<string>();
+
+        public  static List<Professor> ListaProfessor = new List<Professor>();
 
 
-        public void Menu()
+        public Professor(string Nome, int Idade, string Materia, string Sala)
+        {
+            
+
+        }
+
+        public  void Menu()
         {
 
-            Console.WriteLine("1--CADASTRAR PROFESSOR\n2--EDITAR PROFESSOR\nATRIBUIR NOTA A UM ALUNO(A)");
+            Console.WriteLine("1--CADASTRAR PROFESSOR\n2--EDITAR PROFESSOR\nATRIBUIR NOTA A UM ALUNO(A)".ToUpper());
 
             int verificar;
 
@@ -49,55 +57,110 @@ namespace Escola
 
             }
 
-            
-
+        public enum TabelaMateria
+        {
+            PORTUGUÊS,
+            SOCIOLOGIA,
+            FILOSOFIA,
+            ARTES,
+            HISTÓRIA,
+            MATEMATICA,
+            QUIMICA,
+            BIOLOGIA,
+            FÍSICA,
+            ED_FÍSICA,
+            GEOGRAFIA,
+            INGLÊS
+        }
+        
 
         //FUNÇÃO QUE CRIA PROFESSOR
         private void ProfessoresCadastro()
         {
+          
+            Console.Clear();
+
+            Console.Write("\nDigite o nome do professor: ".ToUpper());
+            string nome = Console.ReadLine();
+
+            Console.Write("\nDigite a data de nascimento: ".ToUpper());
+            //idade=
+
+            Console.WriteLine("\nEm que materia ele(a) lecionara?:\n".ToUpper());
+            
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("1--PORTUGUÊS\n2--SOCIOLOGIA\n3--FILOSOFIA\n4--ARTES\n5--HISTÓRIA\n6--MATEMÁTICA".ToUpper());
+            Console.WriteLine("7--QUIMICA\n8--BIOLOGIA\n9--FÍSICA\n10--ED.FÍSICA\n11--GEOGRAFIA\n12--INGLÊS".ToUpper());
+            Console.ResetColor();
+            string materia = Console.ReadLine();
+            int escolheMateria;
+            bool materias = int.TryParse(materia, out escolheMateria);
+            var MateriaEcolhido = (TabelaMateria)escolheMateria;
             
 
-            Console.Clear();
+            Console.WriteLine("\nEm quantas salas ele dara aula?".ToUpper());
+            string numSalas = Console.ReadLine();
+            int salas;
+            bool verificaSalas = int.TryParse(numSalas, out salas);
+            int salass = salas;
+            int i;
+            string salaSerie;
 
-            Console.WriteLine("CADASTRAR PROFESSOR");
-
-            Console.Write("Nome do professor: ");
-            nome = Console.ReadLine();
-
-            Console.Write("\nMatéria do professor: ");
-            materia = Console.ReadLine();
-
-            while (materia == "" || nome == "")
+            while (verificaSalas == false)
             {
-                Console.WriteLine("ERRO, TENTE NOVAMENTE\n");
-
-                ProfessoresCadastro();
+                Console.WriteLine("\nEm quantas salas ele dara aula?".ToUpper());
+                numSalas = Console.ReadLine();
+                salas = 0;
+                verificaSalas = int.TryParse(numSalas, out salas);
+                salaSerie = "";
             }
 
-            string prof = $"\nProfessor: {nome} | Materia: {materia}\n";
 
-            ListaProfessores.Insert(0,prof);
+            for ( i = 0; i <= salass; i++)
+                {
+                    Console.Write("\nEM QUE SÉRIE ELE DARA AULA? ".ToUpper());
+                    string Numserie = Console.ReadLine();
+                    int serie;
+                    bool verificaSerie = int.TryParse(Numserie, out serie);
+
+                    if (verificaSerie)
+                    {
+                        Console.Write("\nE QUAL SERA A SALA? Ex: A,B,C,D: ".ToUpper());
+                        var letra = Console.ReadLine();
+
+                        salaSerie = serie.ToString() + letra;
+                    }
+
+                    while (!verificaSerie)
+                    {
+                        Console.Write("\nEM QUE SÉRI ELE DARA AULA? ".ToUpper());
+                        Numserie = Console.ReadLine();
+                        serie = 0;
+                        verificaSerie = int.TryParse(Numserie, out serie);
+
+                        if (verificaSerie)
+                        {
+                            Console.Write("\nE QUAL SERA A SALA?? Ex: A,B,C,D: ".ToUpper());
+                            var letra = Console.ReadLine();
+
+                            salaSerie = serie.ToString() + letra;
+                        }
+
+
+                    }
+
                
-            Console.Clear() ;
+                }
+                  
+            //Professor professor1 = new Professor(nome,);
 
-            Console.WriteLine("Lista de Professores:\n");
+            //ListaProfessor.Add(professor1);
 
-            foreach (string s in ListaProfessores)
-            {
-
-                Console.WriteLine(s.ToString());
-
-               
-            }
-           
-
-            Console.ReadKey();
-
-            Console.Clear();
 
             Menu();
 
-           
+
+
         }
 
             
@@ -108,7 +171,7 @@ namespace Escola
 
                     
 
-                    Console.WriteLine("EDITAR PROFESSOR\n O QUE DESEJA FAZER?:\n 1--MUDAR INFORMAÇÕES DE PROFESSOR | 2--EXCLUIR PROFESSOR\n");
+                    Console.WriteLine("EDITAR PROFESSOR\n O QUE DESEJA FAZER?:\n 1--MUDAR INFORMAÇÕES DE PROFESSOR | 2--EXCLUIR PROFESSOR\n".ToUpper());
 
                 int verificar;
 
@@ -120,7 +183,7 @@ namespace Escola
 
                 if (verificar == 1 )
                 {
-                    Console.WriteLine("MUDAR INFORMAÇÕES DE PROFESSOR\n 1--MUDAR NOME | 2--MUDAR MATÉRIA:");
+                    Console.WriteLine("MUDAR INFORMAÇÕES DE PROFESSOR\n 1--MUDAR NOME | 2--MUDAR MATÉRIA:".ToUpper());
 
                     var entrada = Console.ReadLine();
                     int saida;
@@ -128,40 +191,17 @@ namespace Escola
                     bool opc = int.TryParse(entrada, out saida);
 
 
-                    
-                       
-                    //MUDAR INFO DO PROFESSOR
-                    switch (saida)
-                    {
-                       case 1:
-
-                        //MECHENDO NA LISTA
-                        foreach (string s in ListaProfessores)
-                        {
-                            
-                            
-                            int indice = ListaProfessores.)
-
-                            Console.WriteLine("Mudara o nome de qual professor?");
-                           
-
-
-                        }
-
-                        break;
-                      
-                    }
                  
                 }
 
                 else if (verificar == 2)
                 {
-                    Console.WriteLine("EXCLUIR PROFESSOR");
+                    Console.WriteLine("EXCLUIR PROFESSOR".ToUpper());
                 }
 
                 else
                 {
-                Console.WriteLine("Valor inválido, tente novamente\n");
+                Console.WriteLine("Valor inválido, tente novamente\n".ToUpper());
 
                  EditarProfessor();
 
@@ -177,7 +217,7 @@ namespace Escola
             {
                 Console.Clear();
 
-                Console.WriteLine("ATRIBUIR NOTA A UM ALUNO(A)");
+                Console.WriteLine("ATRIBUIR NOTA A UM ALUNO(A)".ToUpper());
             }
 
            

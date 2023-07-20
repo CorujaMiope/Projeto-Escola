@@ -26,9 +26,11 @@ namespace Escola
 
                 Console.WriteLine("PÁGINA DO PROFESSOR\n");
 
-                Professor professor = new Professor();
+                Professor professor = new Professor(" ", 0, " ", " ");
 
                 professor.Menu();
+
+                
 
                 Console.ReadLine(); 
 
@@ -42,6 +44,8 @@ namespace Escola
                 Console.WriteLine("PÁGINA DO ALUNO(A)\n");
 
                 Aluno estudante = new Aluno();
+
+                estudante.Menu();
             }
 
 
