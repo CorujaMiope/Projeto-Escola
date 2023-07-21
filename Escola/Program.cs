@@ -26,7 +26,7 @@ namespace Escola
 
                 Console.WriteLine("PÁGINA DO PROFESSOR\n");
 
-                Professor professor = new Professor(" ", 0, " ", " ");
+                Professor professor = new Professor(" ", " ", " ");
 
                 professor.Menu();
 
