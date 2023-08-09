@@ -43,10 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Aluno.cs" />
-    <Compile Include="Professor.cs" />
+    <Compile Include="Aluno\ADMaluno.cs" />
+    <Compile Include="Aluno\Aluno.cs" />
+    <Compile Include="Aluno\Metodos_Criate.cs" />
+    <Compile Include="Aluno\NotasDoAluno.cs" />
+    <Compile Include="Professor\ADMprofessor.cs" />
+    <Compile Include="Aluno\MenuAluno.cs" />
+    <Compile Include="Professor\CriarProfessor.cs" />
+    <Compile Include="Professor\MenuProfessor.cs" />
+    <Compile Include="Professor\Professor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="storage\Repositorio.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

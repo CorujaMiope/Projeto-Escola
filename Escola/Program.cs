@@ -1,56 +1,87 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Escola
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("QUE PÁGINA DESEJA ACESSAR:\n1--PÁGINA DO PROFESSOR\n2--PÁGINA DO ALUNO(A)");
+            Sistema();
+            
+        }
 
-
+        public static void Sistema()
+        {
+            Console.Clear();
+            
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine(" * * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
+            Console.WriteLine(" *               QUE PÁGINA DESEJA ACESSAR?:             *");
+            Console.WriteLine(" *               1--ADMINISTRAR PROFESSOR                *");
+            Console.WriteLine(" *               2--ADMINISTRAR ALUNO(A)                 *");           
+            Console.WriteLine(" * * * * * * * * * * * * * * * * * * * * * * * * * * * * *");
+            Console.ResetColor();
             int verificar;
 
             bool tecla;
 
             tecla = int.TryParse(Console.ReadKey().KeyChar.ToString(), out verificar);
 
-
-            if (verificar == 1)
+            if (tecla)
             {
-                Console.Clear();
 
-                Console.WriteLine("PÁGINA DO PROFESSOR\n");
+                if (verificar == 1)
+                {
+                    Console.Clear();
 
-                Professor professor = new Professor(" ", " ", " ");
+                    Console.WriteLine("CRIAR E EDITAR PROFESSOR\n");
 
-                professor.Menu();
+                    MenuProfessor professor = new MenuProfessor();
 
-                
+                    professor.Menu();
 
-                Console.ReadLine(); 
+
+
+                    Console.ReadLine();
+
+                }
+
+
+                else if (verificar == 2)
+                {
+                    Console.Clear();
+
+                    Console.WriteLine("CRIAR E EDITAR ALUNO(A)\n");
+
+                    MenuAluno menuAluno = new MenuAluno();
+                    menuAluno.Menu();
+                }
+
+               
 
             }
 
+            while(!tecla || verificar > 2)
+                {
+                    Console.Clear();
 
-            else if (verificar == 2)
-            {
-                Console.Clear();
+                    Console.WriteLine("VALOR INVÁLIDO\n");
 
-                Console.WriteLine("PÁGINA DO ALUNO(A)\n");
+                    Sistema();
 
-                Aluno estudante = new Aluno();
-
-                estudante.Menu();
-            }
+                }
 
 
-            
-        
+          
+
         }
+
+       
     }
 }

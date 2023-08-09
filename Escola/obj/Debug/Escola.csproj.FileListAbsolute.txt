@@ -1,0 +1,24 @@
+C:\Users\Dell\source\repos\Escola\Escola\bin\Debug\Escola.exe.config
+C:\Users\Dell\source\repos\Escola\Escola\bin\Debug\Escola.exe
+C:\Users\Dell\source\repos\Escola\Escola\bin\Debug\Escola.pdb
+C:\Users\Dell\source\repos\Escola\Escola\obj\Debug\Escola.csproj.AssemblyReference.cache
+C:\Users\Dell\source\repos\Escola\Escola\obj\Debug\Escola.csproj.SuggestedBindingRedirects.cache
+C:\Users\Dell\source\repos\Escola\Escola\obj\Debug\Escola.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\Escola\Escola\obj\Debug\Escola.exe
+C:\Users\Dell\source\repos\Escola\Escola\obj\Debug\Escola.pdb
+C:\Users\Dell\OneDrive\Área de Trabalho\Escola\Escola\bin\Debug\Escola.exe.config
+C:\Users\Dell\OneDrive\Área de Trabalho\Escola\Escola\bin\Debug\Escola.exe
+C:\Users\Dell\OneDrive\Área de Trabalho\Escola\Escola\bin\Debug\Escola.pdb
+C:\Users\Dell\OneDrive\Área de Trabalho\Escola\Escola\obj\Debug\Escola.csproj.AssemblyReference.cache
+C:\Users\Dell\OneDrive\Área de Trabalho\Escola\Escola\obj\Debug\Escola.csproj.SuggestedBindingRedirects.cache
+C:\Users\Dell\OneDrive\Área de Trabalho\Escola\Escola\obj\Debug\Escola.csproj.CoreCompileInputs.cache
+C:\Users\Dell\OneDrive\Área de Trabalho\Escola\Escola\obj\Debug\Escola.exe
+C:\Users\Dell\OneDrive\Área de Trabalho\Escola\Escola\obj\Debug\Escola.pdb
+C:\Users\theod\OneDrive\Área de Trabalho\Escola\Escola\obj\Debug\Escola.csproj.AssemblyReference.cache
+C:\Users\theod\OneDrive\Área de Trabalho\Escola\Escola\obj\Debug\Escola.csproj.SuggestedBindingRedirects.cache
+C:\Users\theod\OneDrive\Área de Trabalho\Escola\Escola\obj\Debug\Escola.csproj.CoreCompileInputs.cache
+C:\Users\theod\OneDrive\Área de Trabalho\Escola\Escola\obj\Debug\Escola.exe
+C:\Users\theod\OneDrive\Área de Trabalho\Escola\Escola\obj\Debug\Escola.pdb
+C:\Users\theod\OneDrive\Área de Trabalho\Escola\Escola\bin\Debug\Escola.exe.config
+C:\Users\theod\OneDrive\Área de Trabalho\Escola\Escola\bin\Debug\Escola.exe
+C:\Users\theod\OneDrive\Área de Trabalho\Escola\Escola\bin\Debug\Escola.pdb
